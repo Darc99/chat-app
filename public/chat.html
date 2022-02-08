@@ -18,7 +18,7 @@
             <!-- <button id="increment">+1</button> -->
             <div class="compose">
                 <form id='msg-form'>
-                    <input name="msg" type="text" placeholder="Message">
+                    <input name="msg" type="text" placeholder="Message" required autocomplete="off">
                     <button>Send</button>
                 </form>
                 <button id="send-loc">Location</button>
@@ -30,7 +30,7 @@
     <script id="msg-template" type="text/html">
         <div class="message">
             <p>
-                <span class="message__name">User</span>
+                <span class="message__name">{{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
             </p>
             <p>{{message}}</p>     
@@ -39,7 +39,7 @@
     <script id="location-template" type="text/html">
         <div class="message">
             <p>
-                <span class="message__name">User</span>
+                <span class="message__name">{{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
             </p>
             <p><a href="{{location}}" target="_blank">My location</a></p>
